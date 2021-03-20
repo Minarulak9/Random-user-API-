@@ -1,0 +1,171 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: rgb(233, 232, 232);
+  font-size: 18px;
+}
+
+header {
+  width: 100%;
+  height: 40vh;
+  background: rgb(37, 37, 49);
+}
+
+header > h2 {
+  text-align: center;
+  padding: 20px 0;
+  color: rgb(243, 243, 243);
+  font-size: 2.5rem;
+  letter-spacing: 13px;
+}
+
+.userBox {
+  width: 50%;
+  height: auto;
+  background: white;
+  margin: 60px auto;
+  border-radius: 10px;
+  box-shadow: 5px 5px 15px -10px;
+  overflow: hidden;
+}
+
+.userDetails {
+  width: 100%;
+  height: 50%;
+  padding: 15px 8px;
+  display: flex;
+}
+
+.userImg {
+  width: 180px;
+  height: 180px;
+  background: rgb(37, 37, 49);
+  border-radius: 50%;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+  box-shadow: 5px 5px 15px -5px;
+  border: 5px solid rgb(37, 37, 49);
+  flex: 0 0 180px;
+}
+
+.userPic {
+  width: 100%;
+  height: 100%;
+}
+
+.userContent {
+  margin-left: 5%;
+  padding-top: 30px;
+  flex: 1;
+}
+.userContent > div {
+  width: 100%;
+  background-color: rgb(235, 235, 235);
+}
+.userContent > div > h1,
+.userContent > div > h2 {
+  color: rgb(41, 41, 41);
+  display: grid;
+  grid-template-columns: 115px 380px;
+  margin: 5px 0;
+  transition: 1s;
+}
+
+.lable {
+  justify-self: start;
+}
+
+.about {
+  padding: 10px;
+  display: inline-block;
+  background-color: rgb(37, 37, 49);
+  color: white;
+  border-bottom: 3px solid rgb(182, 182, 182);
+  border-top: 1.5px solid rgb(165, 165, 165);
+}
+
+.aboutPara {
+  padding: 8px 15px;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  width: 97%;
+  margin: 10px auto;
+  min-height: 100px;
+  background-color: rgb(235, 235, 235);
+}
+
+.newUser {
+  display: block;
+  padding: 10px 35px;
+  font-size: 1.2rem;
+  margin: 0 10px 10px auto;
+  background: rgb(37, 37, 49);
+  color: white;
+  outline: none;
+}
+
+.newUser:hover {
+  cursor: not-allowed;
+  transition: 0.4s;
+}
+.enable:hover {
+  background: rgb(233, 232, 232);
+  color: black;
+  cursor: pointer;
+}
+.internetCheck,
+.error {
+  padding: 10px 15px;
+  display: inline-block;
+  background: white;
+  color: rgb(37, 37, 49);
+  position: absolute;
+  top: 0;
+  right: 0;
+  transition: 0.5s;
+  display: none;
+  font-size: 1.2rem;
+}
+.error {
+  top: 50px;
+}
+.active {
+  display: block;
+}
+@media (max-width: 1400px) {
+  .userBox {
+    width: 60%;
+  }
+}
+@media (max-width: 1130px) {
+  .userBox {
+    width: 80%;
+  }
+}
+@media (max-width: 900px) {
+  header > h2 {
+    font-size: 1.2rem;
+    padding-top: 50px;
+    letter-spacing: inherit;
+  }
+
+  .userBox {
+    width: 90%;
+  }
+
+  .userDetails {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media (max-width: 650px) {
+  .userContent > div > h1,
+  .userContent > div > h2 {
+    grid-template-columns: 90px 1fr;
+    font-size: 1.2rem;
+  }
+}
